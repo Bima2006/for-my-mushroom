@@ -15,13 +15,12 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            /* Soft Romantic Background (Pastel Pink to Lavender) */
             background: linear-gradient(135deg, #ffdde1, #ee9ca7, #e2d1f9, #ffdde1);
             background-size: 400% 400%;
             animation: cloudBG 20s ease infinite;
             font-family: 'Montserrat', sans-serif;
             overflow: hidden;
-            color: #333; /* Darker text for readability on light BG */
+            color: #333;
         }
 
         @keyframes cloudBG {
@@ -30,7 +29,6 @@
             100% { background-position: 0% 50%; }
         }
 
-        /* Sparkle Particle Style */
         .particle {
             position: absolute;
             pointer-events: none;
@@ -45,24 +43,42 @@
             100% { opacity: 0; transform: scale(0); }
         }
 
-        /* Liquid Glass Card */
         .liquid-glass-card {
             background: rgba(255, 255, 255, 0.2);
             backdrop-filter: blur(20px) saturate(180%);
             -webkit-backdrop-filter: blur(20px) saturate(180%);
             border: 2px solid rgba(255, 255, 255, 0.4);
-            border-radius: 50px 20px 50px 20px; /* Non-uniform curves for liquid feel */
-            padding: 50px 30px;
+            border-radius: 50px 20px 50px 20px;
+            padding: 40px 25px;
             text-align: center;
             width: 90%;
             max-width: 400px;
-            box-shadow: 0 15px 35px rgba(238, 156, 167, 0.3); /* Subtle romantic shadow */
+            max-height: 85vh; /* Card එක ස්ක්‍රීන් එකට වඩා උස යන එක නවත්තනවා */
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 15px 35px rgba(238, 156, 167, 0.3);
             z-index: 100;
             transition: all 0.5s ease-out;
-            /* Liquid sheen effect */
             background-image: linear-gradient(120deg, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0) 50%, rgba(255,255,255,0.3) 100%);
             background-size: 200% 100%;
             animation: liquidSheen 5s linear infinite;
+        }
+
+        /* මැසේජ් එකට විතරක් Scroll එක දෙන කොටස */
+        .message-content {
+            overflow-y: auto;
+            margin: 15px 0;
+            padding: 0 10px;
+            scrollbar-width: thin;
+            scrollbar-color: #ff6b81 transparent;
+        }
+
+        .message-content::-webkit-scrollbar {
+            width: 4px;
+        }
+        .message-content::-webkit-scrollbar-thumb {
+            background: #ff6b81;
+            border-radius: 10px;
         }
 
         @keyframes liquidSheen {
@@ -70,8 +86,8 @@
             100% { background-position: -200% 0; }
         }
 
-        h1 { font-family: 'Dancing Script', cursive; font-size: 2.8rem; margin-bottom: 15px; color: #ff6b81; text-shadow: 1px 1px 5px rgba(255, 107, 129, 0.3); }
-        p { font-size: 1.1rem; line-height: 1.6; opacity: 0.9; color: #555; }
+        h1 { font-family: 'Dancing Script', cursive; font-size: 2.5rem; margin-bottom: 10px; color: #ff6b81; text-shadow: 1px 1px 5px rgba(255, 107, 129, 0.3); }
+        p { font-size: 1rem; line-height: 1.6; opacity: 0.9; color: #444; }
 
         .big-heart {
             font-size: 80px;
@@ -84,7 +100,7 @@
 
         @keyframes beat { to { transform: scale(1.15); } }
 
-        .btn-container { margin-top: 30px; display: flex; justify-content: center; gap: 15px; height: 50px; }
+        .btn-container { margin-top: 20px; display: flex; justify-content: center; gap: 15px; height: 50px; position: relative; }
         
         .btn {
             padding: 12px 35px;
@@ -94,7 +110,6 @@
             cursor: pointer;
             transition: 0.3s;
             font-family: 'Montserrat', sans-serif;
-            text-shadow: none;
         }
 
         #yesBtn { background: #ff6b81; color: white; box-shadow: 0 5px 15px rgba(255, 107, 129, 0.3); }
@@ -112,7 +127,9 @@
 
         <div id="step2" style="display:none;">
             <h1>I Love You! ❤️</h1>
-            <p>අහන්න, මන් දන්නෑ ඇත්තටම ඔයාට මේක කොහොමද කියන්නෙ කියලා. ඇත්තම කිව්වොත් ඔයාට මන් ආදරෙයි.. නෑ නෑ මන් ඔයාට ආදරෙයි.. ඒත් හැබැයි දෙකම එකයි නේ🤔. හරි කොහොම හරි. ඔයා ඇත්තටම ශෝයි අනේ🤭. මම ආස ටයිප් එකක් තියෙනවා, ඇත්තටම මට නොහිතපු වෙලාවක හම්බුණ මම ආස ටයිප් කෙනා තමයි ඔයා. ඒ කියන්නෙ ඔයාගෙ ගතිගුණ, හැසිරීම මම ඒ හැමදේටම කැමතියි. ඔයා වගේ අය අඩුයි, අඩුයි කියන්නෙ නැතිම තරම්. තව දෙයක් ඔයා පොඩි ළමයෙක් වගේ වෙලාවකට🤭, හරි උර්තල්ල්ල්😙. මන් ඒකට ආසයි. මන් හොඳට හිතල බැලුවා ඔයා ගැන, මන් හිතනවා ඔයා තමා මට ගැළපෙන කෙනා කියලා, ඉතිම් තව කල් දාන්න හිතක් නෑ සොඳුරිය මට😪… ඒ නිසා, මම ඔයාට ආදරෙයි…❤️❤️ ඔයාට කෝල් එකකිනුත් අහන්න ඕනි කිව්ව තමයි, නමුත් කෝල් එකක් ගන්න චාන්ස් එකක් ලැබීමේ සම්භාවිතාවය අඩුයි. ඒ නිසා දැනට මේ විදිහට මගෙ පිවිතුරු ආදරය ඔබතුමියට ප්‍රකාශ කරන්නෙමි. ආදරෙයි❤️ ආදරෙයි❤️ ආදරෙයි❤️…Ummmmh 😚😚❤️❤️. Will you be mine forever?</p>
+            <div class="message-content">
+                <p>අහන්න, මන් දන්නෑ ඇත්තටම ඔයාට මේක කොහොමද කියන්නෙ කියලා. ඇත්තම කිව්වොත් ඔයාට මන් ආදරෙයි.. නෑ නෑ මන් ඔයාට ආදරෙයි.. ඒත් හැබැයි දෙකම එකයි නේ🤔. හරි කොහොම හරි. ඔයා ඇත්තටම ශෝයි අනේ🤭. මම ආස ටයිප් එකක් තියෙනවා, ඇත්තටම මට නොහිතපු වෙලාවක හම්බුණ මම ආස ටයිප් කෙනා තමයි ඔයා. ඒ කියන්නෙ ඔයාගෙ ගතිගුණ, හැසිරීම මම ඒ හැමදේටම කැමතියි. ඔයා වගේ අය අඩුයි, අඩුයි කියන්නෙ නැතිම තරම්. තව දෙයක් ඔයා පොඩි ළමයෙක් වගේ වෙලාවකට🤭, හරි උර්තල්ල්ල්😙. මන් ඒකට ආසයි. මන් හොඳට හිතල බැලුවා ඔයා ගැන, මන් හිතනවා ඔයා තමා මට ගැළපෙන කෙනා කියලා, ඉතිම් තව කල් දාන්න හිතක් නෑ සොඳුරිය මට😪… ඒ නිසා, මම ඔයාට ආදරෙයි…❤️❤️ ඔයාට කෝල් එකකිනුත් අහන්න ඕනි කිව්ව තමයි, නමුත් කෝල් එකක් ගන්න චාන්ස් එකක් ලැබීමේ සම්භාවිතාවය අඩුයි. ඒ නිසා දැනට මේ විදිහට මගෙ පිවිතුරු ආදරය ඔබතුමියට ප්‍රකාශ කරන්නෙමි. ආදරෙයි❤️ ආදරෙයි❤️ ආදරෙයි❤️…Ummmmh 😚😚❤️❤️. Will you be mine forever?</p>
+            </div>
             <div class="btn-container">
                 <button class="btn" id="yesBtn" onclick="celebrate()">YES!</button>
                 <button class="btn" id="noBtn" onmouseover="dodge()">No</button>
@@ -121,12 +138,10 @@
     </div>
 
     <script>
-        // 1. Particle Trail Effect
         function createParticle(e) {
             const x = e.pageX || (e.touches ? e.touches[0].pageX : 0);
             const y = e.pageY || (e.touches ? e.touches[0].pageY : 0);
-            const numParticles = e.touches ? 3 : 1; // More particles on touch for effect
-            
+            const numParticles = e.touches ? 3 : 1;
             for (let i = 0; i < numParticles; i++) {
                 const p = document.createElement('div');
                 p.className = 'particle';
@@ -139,15 +154,13 @@
             }
         }
 
-        // 2. Step Logic
         function nextStep() {
             document.getElementById('step1').style.display = 'none';
-            document.getElementById('step2').style.display = 'block';
-            // Start floating hearts in background
+            document.getElementById('step2').style.display = 'flex';
+            document.getElementById('step2').style.flexDirection = 'column';
             setInterval(createFloatingHeart, 600);
         }
 
-        // 3. Dodge Logic
         function dodge() {
             const btn = document.getElementById('noBtn');
             btn.style.left = Math.random() * 70 + '%';
@@ -155,19 +168,16 @@
             btn.style.position = 'fixed';
         }
 
-        // 4. Celebration & WhatsApp
         function celebrate() {
             confetti({ particleCount: 300, spread: 160, origin: { y: 0.6 } });
             document.getElementById('mainCard').innerHTML = "<h1>Yay! 😍</h1><p>I'm so happy! ❤️ Redirecting to WhatsApp...</p>";
-            
             setTimeout(() => {
-                const phoneNumber = "94725850044"; // Your Number Here
+                const phoneNumber = "94725850044"; 
                 const msg = "I said YES! ❤️ I love you too";
                 window.location.href = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(msg)}`;
             }, 2000);
         }
 
-        // 5. Floating Background Hearts
         function createFloatingHeart() {
             const h = document.createElement('div');
             h.innerHTML = Math.random() > 0.5 ? '❤️' : '💖';
